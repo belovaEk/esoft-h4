@@ -1,16 +1,21 @@
 import BookCard from './BookCard'
 import styles from '/src/styles/SettingsPage.module.scss'
 
+import { useContext } from 'react';
+import { themes } from "./styles/theme"
+import { ThemeContext } from "./context/ThemeContext"
+
 
 function SettingsPage(){
+    const { theme, toggleTheme } = useContext(ThemeContext);
+    const currentTheme = themes[theme];
     return (
-        <>
-            <div className={styles.container}>
+            <div className={styles.container} style={{...currentTheme}}>
                 <h1>Настройки</h1>
                 <div className={styles.chapters}>
                     <div className={styles.chapter}>
                         <h2>Тема:</h2>
-                        <button className='button_general'>Сменить тему☀️/🌙</button>
+                        <button onClick={toggleTheme} style={{border: currentTheme.border}} className='button_general'>Сменить тему{theme === 'light' ? '☀️' : '🌙'}</button>
                         <div>
                             <BookCard/>
                         </div>
@@ -18,8 +23,8 @@ function SettingsPage(){
 
                     <div className={styles.chapter}>
                         <h2>Управление данными:</h2>
-                        <button className='button_general'>Сбросить все избранное</button>
-                        <button className='button_general'>Загрузить примеры книг (для тестирования)</button>
+                        <button style={{border: currentTheme.border}} className='button_general'>Сбросить все избранное</button>
+                        <button style={{border: currentTheme.border}} className='button_general'>Загрузить примеры книг (для тестирования)</button>
                     </div>
 
                     <div className={styles.chapter}>    
@@ -50,13 +55,12 @@ function SettingsPage(){
                         </div>
 
                     <div className={styles.text_example}>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque, enim id mollis lacinia, lorem turpis condimentum lorem, vel auctor tortor odio quis dui. Vivamus maximus metus ac orci luctus ornare pulvinar ut nisi. Ut et odio elit. Nam nec erat ac dui tempor congue. Nam a convallis arcu, a consequat nunc. Integer lorem elit, porta non ex sed, suscipit fringilla nunc. Etiam molestie ac dui id lobortis. Sed blandit faucibus facilisis. Ut non ante sodales, mollis risus sed, gravida dui. Nunc cursus mi imperdiet augue laoreet, vel egestas nisi lacinia. Nulla eu ornare tortor, quis pretium ipsum. Duis viverra vehicula tempor. Nunc sed tempor purus. Sed non bibendum lacus. Vestibulum augue risus, ultricies ac laoreet in, iaculis sagittis massa.</p>
+                        <p style={{color: 'black'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque, enim id mollis lacinia, lorem turpis condimentum lorem, vel auctor tortor odio quis dui. Vivamus maximus metus ac orci luctus ornare pulvinar ut nisi. Ut et odio elit. Nam nec erat ac dui tempor congue. Nam a convallis arcu, a consequat nunc. Integer lorem elit, porta non ex sed, suscipit fringilla nunc. Etiam molestie ac dui id lobortis. Sed blandit faucibus facilisis. Ut non ante sodales, mollis risus sed, gravida dui. Nunc cursus mi imperdiet augue laoreet, vel egestas nisi lacinia. Nulla eu ornare tortor, quis pretium ipsum. Duis viverra vehicula tempor. Nunc sed tempor purus. Sed non bibendum lacus. Vestibulum augue risus, ultricies ac laoreet in, iaculis sagittis massa.</p>
                     </div>
                     </div>
                 </div>
                 
             </div>
-        </>
     )
 
 }

@@ -2,3 +2,7 @@
     border: 1px solid #000;
     height: 35px;
 }
+
+* {
+    transition: background-color 0.3s, color 0.3s;
+}

@@ -1,9 +1,14 @@
 import styles from '/src/styles/BookReader.module.scss'
+import { useContext } from "react";
+import { ThemeContext } from "./context/ThemeContext";
+import { themes } from "./styles/theme";
 
 function BookReader(){
+    const { theme } = useContext(ThemeContext);
+    const currentTheme = themes[theme];
     return (
         <>
-        <div className={styles.container}>
+        <div className={styles.container} style={{...currentTheme}}>
             <h1>Название</h1>
             <div className={styles.text_container}>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque, enim id mollis lacinia, lorem turpis condimentum lorem, vel auctor tortor odio quis dui. Vivamus maximus metus ac orci luctus ornare pulvinar ut nisi. Ut et odio elit. Nam nec erat ac dui tempor congue. Nam a convallis arcu, a consequat nunc. Integer lorem elit, porta non ex sed, suscipit fringilla nunc. Etiam molestie ac dui id lobortis. Sed blandit faucibus facilisis. Ut non ante sodales, mollis risus sed, gravida dui. Nunc cursus mi imperdiet augue laoreet, vel egestas nisi lacinia. Nulla eu ornare tortor, quis pretium ipsum. Duis viverra vehicula tempor. Nunc sed tempor purus. Sed non bibendum lacus. Vestibulum augue risus, ultricies ac laoreet in, iaculis sagittis massa.

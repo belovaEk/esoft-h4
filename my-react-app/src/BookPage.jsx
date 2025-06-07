@@ -1,9 +1,21 @@
 import styles from '/src/styles/BookPage.module.scss'
+
+import { useNavigate } from 'react-router-dom';
+
+import { useContext } from "react";
+import { ThemeContext } from "./context/ThemeContext";
+import { themes } from "./styles/theme";
+
 function BookPage(){
+
+    const navigate = useNavigate();
+
+    const { theme } = useContext(ThemeContext);
+    const currentTheme = themes[theme];
     return (
         <>
         
-        <div className={styles.container}>
+        <div className={styles.container} style={{...currentTheme}}>
             <div>
                 <img src="src/assets/covers/Cover-cat.jpg" alt="" />
                 <h1>Название</h1>
@@ -21,10 +33,10 @@ Aliquam erat volutpat. Suspendisse et blandit tellus. Cras vel elit quis dui iac
 Nam nec velit in risus ultrices sodales. Etiam consequat nibh vel ex rutrum bibendum a id quam. Suspendisse id metus in sem posuere porta vestibulum eget risus. Mauris eget malesuada est. Integer pulvinar bibendum velit eget congue. Donec molestie est at arcu imperdiet, consequat fermentum mauris vestibulum. Aliquam rutrum, ligula et faucibus posuere, eros urna fermentum libero, quis sodales magna quam nec magna. Donec id nulla id urna dignissim interdum. Morbi facilisis tellus lacus, ultricies accumsan est porta ut. Nam ultricies velit lectus, non placerat enim suscipit eu. Proin ultricies convallis neque, at tempus purus rhoncus sed.
                 </p>
 
-                <button className='button_general'>В избранное<img src="src/assets/ico/icon-favourites_black.png" alt="" width={'30px'}/></button>
-                <button className='button_general'>Читать</button>
+                <button className='button_general' style={{border: currentTheme.border}}>В избранное</button>
+                <button className='button_general'style={{border: currentTheme.border}}>Читать</button>
             </div>
-        <button className={['button_general', styles.back_btn].join(' ')}>Назад</button>
+        <button onClick={() => navigate(`/`)} className={['button_general', styles.back_btn ].join(' ')} style={{border: currentTheme.border}}>Назад</button>
         </div>
         </>
     )

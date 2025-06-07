@@ -50,4 +50,5 @@
 .settings_btn{
     margin-right: 50px;
     cursor: pointer;
+    z-index: 2;
 }

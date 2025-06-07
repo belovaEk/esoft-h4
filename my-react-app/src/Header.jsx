@@ -1,26 +1,35 @@
 import styles from '/src/styles/Header.module.css'
+import { useNavigate } from 'react-router-dom';
+
+import { useContext } from 'react';
+import { themes } from "./styles/theme"
+import { ThemeContext } from "./context/ThemeContext"
 
 function Header() {
+    const navigate = useNavigate();
+    const { theme, toggleTheme } = useContext(ThemeContext);
+    const currentTheme = themes[theme];
     return (
         <>
         <div className={styles.header}>
             <div className={styles.container}>
             <div className={styles.logo}>
-                <img src="src/assets/logo/book-shelf_black.png" alt="Книжная полка" width={'64px'}/>
+                <img src={`src/assets/logo/book-shelf_${currentTheme.color_ico}.png`} alt="Книжная полка" width={'64px'}/>
                 <p>Книжная полка</p>
             </div>
             <div className={styles.search_container}>
-                <input className={styles.search_input} type="text" />
-            <button className={styles.search_button}><img src="src/assets/ico/icon-search_black.png" alt="" width={'25px'}/></button>
+                <input className={styles.search_input} style={currentTheme} type="text" />
+            <button className={styles.search_button}><img src={`src/assets/ico/icon-search_${currentTheme.color_ico}.png`} alt="" width={'25px'}/></button>
             </div>
             
             <div className={styles.favourite_container}>
-                <img src="src/assets/ico/icon-favourites_black.png" alt="" width={'30px'}/>
+                <img src={`src/assets/ico/icon-favourites_${currentTheme.color_ico}.png`} alt="" width={'30px'}/>
                 <p>3</p>
             </div>
         </div>
-        <button className={styles.settings_btn}>Настройки  <img src="src/assets/ico/icon-settings_black.png" alt=""  width={'20px'}/></button>
-        <button className={[styles.settings_btn].join(' ')}>Сменить тему☀️/🌙</button>
+                <button onClick={() => navigate(`/`)} className={styles.settings_btn}>Главная</button>
+        <button onClick={() => navigate(`/settings`)} className={styles.settings_btn}>Настройки  <img src={`src/assets/ico/icon-settings_${currentTheme.color_ico}.png`} alt=""  width={'20px'}/></button>
+        <button  onClick={toggleTheme} className={styles.settings_btn}>Сменить тему{theme === 'light' ? '☀️' : '🌙'}</button>
         </div>
 
         </>
