@@ -52,3 +52,21 @@
     cursor: pointer;
     z-index: 2;
 }
+
+@media (max-width: 1750px) {
+   .container{
+    padding-left: 30px;
+    justify-content: start;
+   }
+
+   .settings_btn{
+    margin-right: 20px;
+   }
+  }
+
+  @media (max-width: 1300px) {
+    .search_input{ width: 300px;}
+   h1{
+    font-size: 24px;
+   }
+  }

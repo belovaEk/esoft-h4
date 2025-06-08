@@ -29,7 +29,7 @@ const Header = memo(function Header() {
             <div className={styles.container}>
             <div className={styles.logo}>
                 <img src={`/logo/book-shelf_${currentTheme.color_ico}.png`} alt="Книжная полка" width={'64px'}/>
-                <p>Книжная полка</p>
+                <h1>Книжная полка</h1>
             </div>
             <form  onSubmit={handleSearch} className={styles.search_container}>
                 <input className={styles.search_input} style={currentTheme} type="text"  value={localQuery} onChange={(e) => setLocalQuery(e.target.value)}  placeholder="Поиск по названию или автору"/>
