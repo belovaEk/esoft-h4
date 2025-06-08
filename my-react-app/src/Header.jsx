@@ -32,7 +32,7 @@ const Header = memo(function Header() {
                 <p>Книжная полка</p>
             </div>
             <form  onSubmit={handleSearch} className={styles.search_container}>
-                <input className={styles.search_input} style={currentTheme} type="text"  value={localQuery} onChange={(e) => setLocalQuery(e.target.value)}   placeholder="Поиск по названию или автору"/>
+                <input className={styles.search_input} style={currentTheme} type="text"  value={localQuery} onChange={(e) => setLocalQuery(e.target.value)}  placeholder="Поиск по названию или автору"/>
                 <button className={styles.search_button}><img src={`/ico/icon-search_${currentTheme.color_ico}.png`} alt="" width={'25px'}/></button>
             </form>
             

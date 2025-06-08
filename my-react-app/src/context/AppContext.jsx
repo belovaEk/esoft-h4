@@ -1,5 +1,6 @@
 import { createContext, useContext, useReducer, useMemo } from 'react';
 import booksData from '/src/data/books.json'
+
 const AppContext = createContext();
 
 const getInitialState = () => {
@@ -37,6 +38,10 @@ function appReducer(state, action) {
       return { ...state, searchQuery: action.payload };
     case 'SET_FILTERS':
       return { ...state, filters: { ...state.filters, ...action.payload } };
+
+    case 'DELETE_FAVORITE':
+      localStorage.removeItem('bookFavorites');
+      return {...state, favorites: []}
     default:
       return state;
   }
@@ -51,6 +56,7 @@ export function AppProvider({ children }) {
     toggleFavorite: (id) => dispatch({ type: 'TOGGLE_FAVORITE', payload: id }),
     setSearchQuery: (query) => dispatch({ type: 'SET_SEARCH_QUERY', payload: query }),
     setFilters: (filters) => dispatch({ type: 'SET_FILTERS', payload: filters }),
+    deleteFavorite: () => dispatch({type: 'DELETE_FAVORITE'})
   }), [state]);
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

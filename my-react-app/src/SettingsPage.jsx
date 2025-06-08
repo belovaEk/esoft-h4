@@ -8,11 +8,14 @@ import { ThemeContext } from "./context/ThemeContext"
 import { useTextSettings } from './context/TextSettingsContext';
 
 import { useTextStyles } from './context/TextSettingsContext';
+import { useAppContext } from './context/AppContext';
 
 
 function SettingsPage(){
     const { theme, toggleTheme } = useContext(ThemeContext);
     const currentTheme = themes[theme];
+
+    const { deleteFavorite } = useAppContext();
 
     const { textSettings, updateTextSettings } = useTextSettings();
     const handleColorChange = (e) => {
@@ -24,6 +27,12 @@ function SettingsPage(){
 
     const handleBoldChange = (e) => {
         updateTextSettings({ bold: e.target.checked });
+    };
+
+     const handleDeleteFavorites = () => {
+        if (window.confirm('Вы уверены, что хотите удалить все избранные книги?')) {
+            deleteFavorite();
+        }
     };
 
     const  textStyles = useTextStyles();
@@ -42,7 +51,7 @@ function SettingsPage(){
 
                     <div className={styles.chapter}>
                         <h2>Управление данными:</h2>
-                        <button style={{border: currentTheme.border}} className='button_general'>Сбросить все избранное</button>
+                        <button style={{border: currentTheme.border}} className='button_general' onClick={handleDeleteFavorites}>Сбросить все избранное</button>
                         <button style={{border: currentTheme.border}} className='button_general'>Загрузить примеры книг (для тестирования)</button>
                     </div>
 
