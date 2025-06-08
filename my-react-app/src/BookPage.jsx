@@ -29,13 +29,20 @@ function BookPage(){
 
     if (!book) return <div>Загрузка...</div>;
 
+    const getCover = () => {
+        return book.cover || "/covers/book.png";
+    };
+
 
     return (
         <>
         
         <div className={styles.container} style={{...currentTheme}}>
             <div>
-                <img src={book.cover || "/covers/book.png"} alt={book.totle} style={{maxHeight: '600px', minHeight: '550px'}}/>
+                <img src={getCover()} alt={book.title} style={{maxHeight: '600px', minHeight: '550px'}} onError={(e) => {
+                            e.target.src = "/covers/book.png";
+                            e.target.alt = "Обложка отсутствует";
+                        }}/>
                 <h1>{book.title}</h1>
                 <h2>{book.author}</h2>
                 <h3>ISBN</h3>

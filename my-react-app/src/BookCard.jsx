@@ -14,13 +14,20 @@ function BookCard({book}){
     const { favorites, toggleFavorite } = useAppContext();
     const isFavorite = favorites.includes(book?.id);
 
+    const getCover = () => {
+        return book?.cover || "/covers/book.png";
+    };
+
 
     return(
         <div className={styles.bookCard} style={{...currentTheme, background: currentTheme.background_card}}>
             <div className={styles.container}  onClick={() => navigate(`/book/${book.id}`)}>
                     <div className={styles.cover}>
                         {/*  как сделать дефолтную обложку? */}
-                        <img src={book?.cover || "/covers/book.png"} alt={book?.title || 'обложка'}  width={'170px'}/>
+                        <img src={getCover()} alt={book?.title || 'обложка'} onError={(e) => {
+                            e.target.src = "/covers/book.png";
+                            e.target.alt = "Обложка отсутствует";
+                        }} width={'170px'}/>
                     </div>
                     <h1>{book?.title}</h1>
                     <div>
