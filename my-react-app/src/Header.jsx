@@ -1,10 +1,12 @@
 import styles from '/src/styles/Header.module.css'
 import { useNavigate } from 'react-router-dom';
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { themes } from "./styles/theme"
 import { ThemeContext } from "./context/ThemeContext"
 
+
+import { useAppContext } from './context/AppContext';
 
 import { memo } from 'react';
 
@@ -12,6 +14,15 @@ const Header = memo(function Header() {
     const navigate = useNavigate();
     const { theme, toggleTheme } = useContext(ThemeContext);
     const currentTheme = themes[theme];
+
+    const { favorites, setSearchQuery } = useAppContext();
+    const [localQuery, setLocalQuery] = useState('');
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        setSearchQuery(localQuery);
+    };
+
     return (
         <>
         <div className={styles.header}>
@@ -20,14 +31,14 @@ const Header = memo(function Header() {
                 <img src={`/logo/book-shelf_${currentTheme.color_ico}.png`} alt="Книжная полка" width={'64px'}/>
                 <p>Книжная полка</p>
             </div>
-            <div className={styles.search_container}>
-                <input className={styles.search_input} style={currentTheme} type="text" />
-            <button className={styles.search_button}><img src={`/ico/icon-search_${currentTheme.color_ico}.png`} alt="" width={'25px'}/></button>
-            </div>
+            <form  onSubmit={handleSearch} className={styles.search_container}>
+                <input className={styles.search_input} style={currentTheme} type="text"  value={localQuery} onChange={(e) => setLocalQuery(e.target.value)}   placeholder="Поиск по названию или автору"/>
+                <button className={styles.search_button}><img src={`/ico/icon-search_${currentTheme.color_ico}.png`} alt="" width={'25px'}/></button>
+            </form>
             
             <div className={styles.favourite_container}>
                 <img src={`/ico/icon-favourites_${currentTheme.color_ico}.png`} alt="" width={'30px'}/>
-                <p>3</p>
+                <p>{favorites.length}</p>
             </div>
         </div>
                 <button onClick={() => navigate(`/`)} className={styles.settings_btn}>Главная</button>

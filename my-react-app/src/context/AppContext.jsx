@@ -1,25 +1,37 @@
 import { createContext, useContext, useReducer, useMemo } from 'react';
-
+import booksData from '/src/data/books.json'
 const AppContext = createContext();
 
-const initialState = {
-  books: [],
-  favorites: [],
-  searchQuery: '',
-  filters: {
-    authors: [],
-    onlyFavorites: false,
-  },
+const getInitialState = () => {
+  const savedFavorites = localStorage.getItem('bookFavorites');
+  return{
+    books: booksData,
+    favorites: savedFavorites ? JSON.parse(savedFavorites) : [],
+    searchQuery: '',
+    filters: {
+      authors: [],
+      onlyFavorites: false,
+    }
+
+  }
 };
+
+
+const initialState = getInitialState();
 
 function appReducer(state, action) {
   switch (action.type) {
     case 'TOGGLE_FAVORITE':
+      const newFavorites = state.favorites.includes(action.payload)
+        ? state.favorites.filter((id) => id !== action.payload)
+        : [...state.favorites, action.payload];
+      
+      // Сохраняем в localStorage
+      localStorage.setItem('bookFavorites', JSON.stringify(newFavorites));
+      
       return {
         ...state,
-        favorites: state.favorites.includes(action.payload)
-          ? state.favorites.filter((id) => id !== action.payload)
-          : [...state.favorites, action.payload],
+        favorites: newFavorites
       };
     case 'SET_SEARCH_QUERY':
       return { ...state, searchQuery: action.payload };
