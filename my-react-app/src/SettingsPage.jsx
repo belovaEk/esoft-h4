@@ -5,10 +5,29 @@ import { useContext } from 'react';
 import { themes } from "./styles/theme"
 import { ThemeContext } from "./context/ThemeContext"
 
+import { useTextSettings } from './context/TextSettingsContext';
+
+import { useTextStyles } from './context/TextSettingsContext';
+
 
 function SettingsPage(){
     const { theme, toggleTheme } = useContext(ThemeContext);
     const currentTheme = themes[theme];
+
+    const { textSettings, updateTextSettings } = useTextSettings();
+    const handleColorChange = (e) => {
+        updateTextSettings({ color: e.target.id });
+    };
+    const handleSizeChange = (e) => {
+        updateTextSettings({ size: e.target.id });
+    };
+
+    const handleBoldChange = (e) => {
+        updateTextSettings({ bold: e.target.checked });
+    };
+
+    const  textStyles = useTextStyles();
+
     return (
             <div className={styles.container} style={{...currentTheme}}>
                 <h1>Настройки</h1>
@@ -32,30 +51,30 @@ function SettingsPage(){
                         <div>
                             <h3>Цвет текста:</h3>
                                 <label for="color_black">Черный</label>
-                                <input type="radio" name="font_color" id="color_black" />
-                                <label for="color_darkblue">Темно-синий</label>
-                                <input type="radio" name="font_color" id="color_darkblue" />
+                                <input type="radio" name="font_color" id="black" checked={textSettings.color === 'black'} onChange={handleColorChange}/>
+                                <label for="color_darkblue">Белый</label>
+                                <input type="radio" name="font_color" id="white" checked={textSettings.color === 'white'} onChange={handleColorChange}/>
                                 <label for="color_sepia">Сепия</label>
-                                <input type="radio" name="font_color" id="color_sepia" />
+                                <input type="radio" name="font_color" id="#704214" checked={textSettings.color === '#704214'} onChange={handleColorChange}/>
                         </div>
 
                         <div>
                             <h3>Размер шрифта:</h3>
                             <label for="small">Мелкий</label>
-                            <input type="radio" name="font_size" id="small" />
+                            <input type="radio" name="font_size" id="small" checked={textSettings.size === 'small'} onChange={handleSizeChange}/>
                             <label for="medium">Средний</label>
-                            <input type="radio" name="font_size" id="medium" />
+                            <input type="radio" name="font_size" id="medium" checked={textSettings.size === 'medium'} onChange={handleSizeChange}/>
                             <label for="large">Большой</label>
-                            <input type="radio" name="font_size" id="large" />
+                            <input type="radio" name="font_size" id="large" checked={textSettings.size === 'large'} onChange={handleSizeChange}/>
                         </div>
 
                         <div>
                             <label for="bold">Жирный шрифт</label>
-                            <input type="checkbox" id="bold"/>
+                            <input type="checkbox" id="bold" checked={textSettings.bold} onChange={handleBoldChange}/>
                         </div>
 
-                    <div className={styles.text_example}>
-                        <p style={{color: 'black'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque, enim id mollis lacinia, lorem turpis condimentum lorem, vel auctor tortor odio quis dui. Vivamus maximus metus ac orci luctus ornare pulvinar ut nisi. Ut et odio elit. Nam nec erat ac dui tempor congue. Nam a convallis arcu, a consequat nunc. Integer lorem elit, porta non ex sed, suscipit fringilla nunc. Etiam molestie ac dui id lobortis. Sed blandit faucibus facilisis. Ut non ante sodales, mollis risus sed, gravida dui. Nunc cursus mi imperdiet augue laoreet, vel egestas nisi lacinia. Nulla eu ornare tortor, quis pretium ipsum. Duis viverra vehicula tempor. Nunc sed tempor purus. Sed non bibendum lacus. Vestibulum augue risus, ultricies ac laoreet in, iaculis sagittis massa.</p>
+                    <div className={styles.text_example} style={{background: currentTheme.background_reader}}> 
+                        <p style={textStyles}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque, enim id mollis lacinia, lorem turpis condimentum lorem, vel auctor tortor odio quis dui. Vivamus maximus metus ac orci luctus ornare pulvinar ut nisi. Ut et odio elit. Nam nec erat ac dui tempor congue. Nam a convallis arcu, a consequat nunc. Integer lorem elit, porta non ex sed, suscipit fringilla nunc. Etiam molestie ac dui id lobortis. Sed blandit faucibus facilisis. Ut non ante sodales, mollis risus sed, gravida dui.</p>
                     </div>
                     </div>
                 </div>

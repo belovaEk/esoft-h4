@@ -5,25 +5,21 @@ import { ThemeContext } from "./context/ThemeContext";
 import { themes } from "./styles/theme";
 
 
+import booksData from '/src/data/books.json'
+
+
 function BookList(){
     const { theme } = useContext(ThemeContext);
     const currentTheme = themes[theme];
     return(
         <div className={styles.container} style={{...currentTheme}}>
             <div className={styles.grid_table}>
-                <BookCard/>
-                <BookCard/>
-                <BookCard/>
-                <BookCard/>
-                 <BookCard/>
-                <BookCard/>
-                <BookCard/>
-                <BookCard/> <BookCard/>
-                <BookCard/>
-                <BookCard/>
-                <BookCard/>
-                <BookCard/>
-                <BookCard/>
+                {booksData.map((book) => (
+                    <BookCard key={book.id}
+                                book ={book}/>
+                ))}
+                
+                
             </div>
         </div>
     )

@@ -6,11 +6,14 @@ import BookList from "./BookList"
 import BookPage from "./BookPage"
 import SettingsPage from "./SettingsPage"
 import BookReader from "./BookReader"
+import { NotFound } from './NotFound';
 
 import { useState } from "react"
 import { themes } from "./styles/theme"
 import { ThemeContext } from "./context/ThemeContext"
 
+import { AppProvider } from './context/AppContext';
+import { TextSettingsProvider } from './context/TextSettingsContext';
 
 
 function App() {
@@ -27,7 +30,8 @@ const toggleTheme = () => {
   });
 };
   return (
-
+    <AppProvider>
+      <TextSettingsProvider>
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <Router>
       <div style={{
@@ -43,14 +47,17 @@ const toggleTheme = () => {
               </>
             } />
 
-        <Route path="/book" element={<BookPage />} />
+        <Route path="/book/:id" element={<BookPage />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/reader/:id" element={<BookReader />} />
-        <Route path="*" element={<div>Страница не найдена</div>} />
+        <Route path="*" element={ <NotFound/>} />
       </Routes>
     </div>
     </Router>
+  
     </ThemeContext.Provider>
+    </TextSettingsProvider>
+    </AppProvider>
   )
 }
 

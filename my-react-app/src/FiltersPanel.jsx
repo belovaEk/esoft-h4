@@ -4,6 +4,9 @@ import { useContext } from "react";
 import { ThemeContext } from "./context/ThemeContext";
 import { themes } from "./styles/theme";
 
+
+import booksData from '/src/data/books.json'
+
 function FiltersPanel(){
      const { theme } = useContext(ThemeContext);
     const currentTheme = themes[theme];
@@ -15,14 +18,9 @@ function FiltersPanel(){
                 <form>
                     <label for="author-select">Выберите автора</label>
                     <select name="author" id="author-select" multiple size={"6"}  style={{...currentTheme}}>
-                        <option value="petersburg">Кузя</option>
-                        <option value="samara">Петя</option>
-                        <option value="perm">Ваня</option>
-                        <option value="novosibirsk">Аня</option>
-                        <option value="petersburg">Кузя</option>
-                        <option value="samara">Петя</option>
-                        <option value="perm">Ваня</option>
-                        <option value="novosibirsk">Аня</option>
+                        {booksData.map(book => 
+                            <option value={book.author}>{book.author}</option>
+                        )}
                     </select>
                 </form>
             </div>
