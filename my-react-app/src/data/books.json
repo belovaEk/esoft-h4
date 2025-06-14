@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "title": "1984",
+    "author": "Джордж Оруэлл",
+    "year": 1949,
+    "cover": "/covers/1984.png",
+    "description": "Роман-антиутопия о тоталитарном обществе. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 2,
+    "title": "Мастер и Маргарита",
+    "author": "Михаил Булгаков",
+    "year": 1967,
+    "cover": "/covers/master.png",
+    "description": "Философский роман о добре и зле. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 3,
+    "title": "Гарри Поттер",
+    "author": "Джоан Роулинг",
+    "year": 1997,
+    "cover": "/covers/harry_potter.png",
+    "description": "Первая книга о юном волшебнике. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 4,
+    "title": "Три товарища",
+    "author": "Эрих Мария Ремарк",
+    "year": 1936,
+    "cover": "/covers/three_comrades.png",
+    "description": "Роман о дружбе и любви в послевоенной Германии. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 5,
+    "title": "Маленький принц",
+    "author": "Антуан де Сент-Экзюпери",
+    "year": 1943,
+    "cover": "/covers/little_prince.png",
+    "description": "Философская сказка для взрослых и детей. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 6,
+    "title": "Преступление и наказание",
+    "author": "Фёдор Достоевский",
+    "year": 1866,
+    "cover": "/covers/crime_and_punishment.png",
+    "description": "Психологический роман о преступлении и раскаянии. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 7,
+    "title": "Война и мир",
+    "author": "Лев Толстой",
+    "year": 1869,
+    "cover": "/covers/war_and_peace.png",
+    "description": "Эпический роман о войне 1812 года. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 8,
+    "title": "Улисс",
+    "author": "Джеймс Джойс",
+    "year": 1922,
+    "cover": "/covers/ulysses.png",
+    "description": "Модернистский роман, описывающий один день в Дублине. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 9,
+    "title": "Лолита",
+    "author": "Владимир Набоков",
+    "year": 1955,
+    "cover": "/covers/lolita.png",
+    "description": "Противоречивый роман о запретной страсти. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 10,
+    "title": "Атлант расправил плечи",
+    "author": "Айн Рэнд",
+    "year": 1957,
+    "cover": "/covers/atlas_shrugged.png",
+    "description": "Роман-манифест объективизма. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 11,
+    "title": "Сто лет одиночества",
+    "author": "Габриэль Гарсиа Маркес",
+    "year": 1967,
+    "cover": "/covers/one_hundred_years.png",
+    "description": "Магический реализм о семье Буэндиа. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 12,
+    "title": "Над пропастью во ржи",
+    "author": "Джером Сэлинджер",
+    "year": 1951,
+    "cover": "/covers/catcher_in_the_rye.png",
+    "description": "Роман о подростковом бунте и поиске себя. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 13,
+    "title": "Тень горы",
+    "author": "Грегори Дэвид Робертс",
+    "year": 2015,
+    "cover": "/covers/shantaram.png",
+    "description": "Продолжение истории беглого преступника в Индии. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 14,
+    "title": "Алхимик",
+    "author": "Пауло Коэльо",
+    "year": 1988,
+    "cover": "/covers/alchemist.png",
+    "description": "Притча о поиске своего предназначения. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 15,
+    "title": "Грозовой перевал",
+    "author": "Эмили Бронте",
+    "year": 1847,
+    "cover": "/covers/wuthering_heights.png",
+    "description": "Мрачная история любви и мести на вересковых пустошах. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 16,
+    "title": "Фауст",
+    "author": "Иоганн Вольфганг Гёте",
+    "year": 1808,
+    "cover": "/covers/faust.png",
+    "description": "Трагедия о договоре человека с дьяволом. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  },
+  {
+    "id": 17,
+    "title": "Мартин Иден",
+    "author": "Джек Лондон",
+    "year": 1909,
+    "cover": "/covers/martin_eden.png",
+    "description": "Роман о самообразовании и социальном неравенстве. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula dolor sit amet mi mollis vehicula. Morbi gravida justo a lorem commodo, et dapibus tellus tincidunt. Maecenas facilisis sed tortor quis aliquam. Nullam maximus a purus vel suscipit. Sed a sollicitudin enim, ut porttitor ligula. Nullam eget feugiat odio. Fusce sit amet risus sed nisl pulvinar pretium. Maecenas iaculis fringilla tortor quis elementum. Donec condimentum fringilla erat vel sodales. Praesent fermentum ligula luctus eros condimentum semper."
+  }
+]

@@ -1,0 +1,40 @@
+.container{
+    position: fixed;
+    top: 100px;
+    height: 100vh;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+
+    & button{
+        margin-top: 50px;
+        margin-right: 15px;
+        padding: 5px;
+    }
+}
+
+.title{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.filter_item {
+    font-size: 18px;
+
+    & form select{
+        width: 85%;
+        border: 1px solid #000;
+        border-radius: 5px;
+
+        & option{
+            padding: 5px;
+        }
+    }
+}
+
+.favourite{
+    display: flex;
+    gap: 10px;
+}
+

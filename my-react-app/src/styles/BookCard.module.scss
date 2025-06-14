@@ -1,0 +1,42 @@
+.bookCard{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 5px;
+
+    button{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+
+    img {
+        max-height: 230px;
+    }
+    .container{
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: end;
+    padding: 10px;
+    z-index: 2;
+
+    h1{
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    div {
+        display: flex;
+        gap: 5px;
+    }
+
+    
+}
+}
+
